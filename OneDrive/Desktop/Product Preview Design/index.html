@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Product Preview Design</title>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+        height: 100vh;
+    }
+
+    .mobile-img {
+        border: 1px solid black;
+        border-radius: 20px;
+        height: 400px;
+        width: 400px;
+        display: block;
+        margin: 10px auto;
+        object-fit: cover;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .img-secondary {
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 10px;
+        cursor: pointer;
+
+
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <h1 style="text-align: center;"> Product Preview Design </h1>
+
+    <img id="product-img" class="mobile-img" src="./mobile.jpg" />
+    <div class="container">
+        <img class="img-secondary" src="./mobile.jpg" onclick="changeImage('mobile.jpg')" />
+        <img class="img-secondary" src="./mobile1.jpg" onclick="changeImage('mobile1.jpg')" />
+        <img class="img-secondary" src="./mobile2.jpg" onclick="changeImage('mobile2.jpg')" />
+        <img class="img-secondary" src="./mobile3.jpg" onclick="changeImage('mobile3.jpg')" />
+        <img class="img-secondary" src="./mobile4.jpg" onclick="changeImage('mobile4.jpg')" />
+    </div>
+
+    <script>
+        function changeImage(image) {
+            const productimg = document.getElementById("product-img")
+            productimg.src = image;
+        }
+    </script>
+
+</body>
+
+</html>
